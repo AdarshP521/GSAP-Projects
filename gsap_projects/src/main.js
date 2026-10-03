@@ -1,18 +1,45 @@
 import "./style.css";
 import { gsap } from "gsap";
 
-gsap.to(".box", {
-  x: 200,
-  duration: 1.5,   // seconds
-  delay: 0.3,      // wait 0.3s before starting
-  ease: "elastic.out(1, 0.4)"
+
+
+const obj = {
+  value: 0,
+};
+
+const loader = document.querySelector(".loader");
+const counter = document.querySelector(".loader-count h2");
+
+gsap.to(obj, {
+  value: 100,
+  duration:2,
+  ease: "none",
+  onUpdate: () => {
+    counter.textContent = `${Math.round(obj.value)}%`;
+  },
+  onComplete: () => {
+    gsap.to(loader, {
+      autoAlpha: 0,
+      duration: 1.2,
+      ease: "power3.out",
+      onComplete: () => {
+          tl.play();
+      },
+    });
+  },
 });
 
-document.querySelectorAll(".btn").forEach(btn => {
-  btn.addEventListener("mouseenter", () => {
-    gsap.to(btn, { scale: 1.08, duration: 0.3, ease: "back.out(2)" });
-  });
-  btn.addEventListener("mouseleave", () => {
-    gsap.to(btn, { scale: 1, duration: 0.3, ease: "power2.out" });
-  });
-});
+
+const tl = gsap.timeline({paused: true});
+
+tl.to(".loader", {
+  yPercent: 100,
+  duration: 1.2,
+  ease: "expo.out",
+}).from(".hero-bg img", {
+  scale: 1.5,
+  duration:1.23,
+  ease: "expo.out",
+}, "-=1.1" );
+
+
