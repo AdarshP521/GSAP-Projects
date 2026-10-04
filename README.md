@@ -17,3 +17,21 @@ gsap.to()  // Animates from current values → given values
 gsap.from() // Animates from given values → current values (great for entrance animations)
 gsap.fromTo() // You explicitly set both the start and end values
 gsap.set() // Instantly sets values, no animation (duration 0)
+
+
+
+
+To create a separate new Vite project
+
+npm create vite@latest my-new-project
+
+Follow the prompts to choose a framework (such as Vanilla, React, or Vue) and JavaScript or TypeScript. For a plain JavaScript project, you can use:
+
+npm create vite@latest my-new-project -- --template vanilla
+cd my-new-project
+npm install
+npm run dev
+
+
+main.js is empty, so add this at the top if you want the browser to load style.css:
+import "./style.css";
