@@ -4,24 +4,6 @@ Notes and commands for the Vite + GSAP project in `gsap_projects/`.
 
 GSAP learning notes: [The Ultimate GSAP Book by Swaraj Singh](https://app.notion.com/p/The-Ultimate-GSAP-Book-by-Swaraj-Singh-3b469b6210fc80e8bfaac76e539ec544)
 
-## Open the existing project
-
-In PowerShell, go to the app folder:
-
-```powershell
-cd "C:\Users\Adarsh\OneDrive\Desktop\Web Dev\GSAP-Projects\gsap_projects"
-```
-
-Install dependencies if this is the first time running the project, or after dependencies change:
-
-```powershell
-npm install
-```
-
-## Important commands
-
-Run these from the `gsap_projects/` folder:
-
 | Command | What it does |
 | --- | --- |
 | `npm install` | Installs dependencies from `package.json`. |
