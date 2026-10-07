@@ -4,6 +4,24 @@ Notes and commands for the Vite + GSAP project in `gsap_projects/`.
 
 GSAP learning notes: [The Ultimate GSAP Book by Swaraj Singh](https://app.notion.com/p/The-Ultimate-GSAP-Book-by-Swaraj-Singh-3b469b6210fc80e8bfaac76e539ec544)
 
+
+npm create vite@latest .
+select technology
+delete counter.js file
+remove all js and just add - import './style.css'
+remove all css and add default
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+
+
 | Command | What it does |
 | --- | --- |
 | `npm install` | Installs dependencies from `package.json`. |
